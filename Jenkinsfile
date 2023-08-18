@@ -10,5 +10,13 @@ pipeline {
                 git 'https://github.com/Vamc-admin/app.git'
             }
         }
+
+        stage("unit test"){
+
+            steps{
+                
+                sh 'mvn test'
+            }
+        }
     }
 }
